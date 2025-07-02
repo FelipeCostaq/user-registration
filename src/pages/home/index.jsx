@@ -39,13 +39,24 @@ function Home() {
 
   return (
     <div className="container">
-      <form>
+      <form onSubmit={(e) => {
+        e.preventDefault();
+
+        if (
+          inputName.current.value &&
+          inputAge.current.value &&
+          inputEmail.current.value
+        ) {
+          createUsers();
+        }
+        }}>
         <h1>Cadastro de Usuários</h1>
-        <input name="name" type='text' placeholder='Nome' ref={inputName}/>
-        <input name="age" type='number' placeholder='Idade' ref={inputAge}/>
-        <input name="email" type='email' placeholder='E-mail' ref={inputEmail}/>
-        <button type='button' onClick={createUsers}>Cadastrar</button>
+        <input required name="name" type="text" placeholder="Nome" ref={inputName} />
+        <input required name="age" type="number" placeholder="Idade" ref={inputAge} />
+        <input required name="email" type="email" placeholder="E-mail" ref={inputEmail} />
+        <button type="submit">Cadastrar</button>
       </form>
+
 
       {users.map(user => (
       <div key={user.id} className='card'>
