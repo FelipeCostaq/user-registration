@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://caddastro-usuarios.netlify.app/">
-    <img height="425" width="625" src="https://github.com/FelipeCostaq/WeatherForecast/blob/main/weatherForecastImage.png" alt="Imagem do Site Cadastro de Usuários">
+    <img height="425" width="625" src="https://github.com/FelipeCostaq/user-registration/blob/main/cadastroUsuariosImage.png" alt="Imagem do Site Cadastro de Usuários">
   </a>
 </p>
 <h2>Tecnologias utilizadas</h2>
