@@ -1,38 +1,50 @@
+import { useEffect, useState, useRef } from 'react'
 import './style.css'
 import Trash from '../../assets/img/trash.png'
+import api from '../../services/api'
 
 function Home() {
-  const users = [{
-    id: '2314tr42',
-    name: 'Rodolfo',
-    age: 33,
-    email: 'rod@email.com'
-  },
+  const [users, setUsers] = useState([]); 
 
-  {
-    id: '2219vt92',
-    name: 'Pedro',
-    age: 21,
-    email: 'ped@email.com'
-  },
+  const inputName = useRef();
+  const inputAge = useRef();
+  const inputEmail = useRef();
 
-    {
-    id: '2113vt92',
-    name: 'Paulo',
-    age: 25,
-    email: 'paulo@email.com'
+  async function getUsers(){    
+    const usersFromApi = await api.get('/users');
+
+    setUsers(usersFromApi.data)
   }
-]
 
+  async function createUsers() {
+      await api.post('/users', {
+        name: inputName.current.value,
+        age: inputAge.current.value,
+        email: inputEmail.current.value
+      });
+
+      getUsers();
+  }
+
+  async function deleteUsers(id) {
+    await api.delete(`/users/${id}`)
+
+    getUsers();
+  }
+
+
+  useEffect(() => {
+    getUsers();
+  }, [])
 
   return (
     <div className="container">
       <form>
         <h1>Cadastro de Usuários</h1>
-        <input name="name" type='text' placeholder='Nome'/>
-        <input name="age" type='number' placeholder='Idade'/>
-        <input name="email" type='email' placeholder='E-mail'/>
-        <button type='button'>Cadastrar</button>
+        <input name="name" type='text' placeholder='Nome' ref={inputName}/>
+        <input name="age" type='number' placeholder='Idade' ref={inputAge}/>
+        <input name="email" type='email' placeholder='E-mail' ref={inputEmail}/>
+        <button type='button' onClick={createUsers}>Cadastrar</button>
       </form>
 
       {users.map(user => (
@@ -42,7 +54,7 @@ function Home() {
           <p>Idade: <span>{user.age}</span></p>
           <p>E-mail: <span>{user.email}</span></p>
         </div>
-        <button>
+        <button onClick={() => deleteUsers(user.id)}>
           <img src={Trash} alt="" />
         </button>
       </div>    
