@@ -1,12 +1,21 @@
-# React + Vite
+<h1>Cadastro de Usuários</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2>Descrição</h2>
 
-Currently, two official plugins are available:
+<p>Esse projeto consiste em fazer um site que cadastra usuários em um site</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="center">
+  <a href="https://caddastro-usuarios.netlify.app/">
+    <img height="425" width="625" src="https://github.com/FelipeCostaq/WeatherForecast/blob/main/weatherForecastImage.png" alt="Imagem do Site Cadastro de Usuários">
+  </a>
+</p>
+<h2>Tecnologias utilizadas</h2>
 
-## Expanding the ESLint configuration
+![HTML5](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<h2>Link: </h2>
+<p>https://caddastro-usuarios.netlify.app/</p>
